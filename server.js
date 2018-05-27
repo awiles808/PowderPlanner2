@@ -5,9 +5,9 @@ const express = require('express'),
 //config application
 
 //set the routes
-app.get('/', (req, res) => {
-  res.send('Hello, I is the app!')
-});
+//brings in all routes from routes.js file.
+app.use(require('./app/routes'));
+
 
 //start server
 app.listen(port, () => {
